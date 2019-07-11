@@ -1,7 +1,8 @@
-export interface Meal
-    {id:number,
+export interface Meal {
+    id:number,
     name:string,
     calories:number,
     details:string
-    }
+
+}
 

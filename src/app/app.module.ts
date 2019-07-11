@@ -1,11 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {FormsModule} from '@angular/forms'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MealComponent } from './meal/meal.component';
 import { MealFormComponent } from './meal-form/meal-form.component';
 import { MealPostsComponent } from './meal-posts/meal-posts.component';
+import {MealsService} from './meals.service';
 
 @NgModule({
   declarations: [
@@ -16,9 +18,10 @@ import { MealPostsComponent } from './meal-posts/meal-posts.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [MealsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
