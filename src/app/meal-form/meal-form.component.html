@@ -1,6 +1,6 @@
-<form (ngSubmit)="foodLog()" #foods='ngForm'>
+<form (ngSubmit)="foodLog()" #foodsForm='ngForm'>
   <div class="form-group">
-    <label for="fname">food name</label>
+    <label for="fname">food name{{food.name}}</label>
     <input type="text" required placeholder="enter name of food.." class="form-control" name="fname" #fname="ngModel"
       [(ngModel)]='food.name'>
   </div>
@@ -14,5 +14,5 @@
     <textarea type="text" required placeholder="enter name of food.." rows="4" class="form-control" name="fdetails"
       #fdetails="ngModel" [(ngModel)]="food.details"></textarea>
   </div>
-  <button type="submit" class="btn btn-info ">submit food</button>
+  <button type="submit" class="btn btn-dark">submit food</button>
 </form>

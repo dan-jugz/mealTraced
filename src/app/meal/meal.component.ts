@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { meals } from '../data/meals';
+import { MealsService } from '../meals.service';
 
 
 @Component({
@@ -10,9 +11,15 @@ import { meals } from '../data/meals';
 export class MealComponent implements OnInit {
   _meals = meals;
 
-  constructor() { }
+  
+  constructor(private mealService: MealsService) { }
+
+  onNewFood(food){
+    this.mealService.addFood(food);
+  }
 
   ngOnInit() {
+    this._meals = this.mealService.getFoods()
   }
 
 }
