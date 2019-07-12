@@ -6,15 +6,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MealComponent } from './meal/meal.component';
 import { MealFormComponent } from './meal-form/meal-form.component';
-import { MealPostsComponent } from './meal-posts/meal-posts.component';
 import {MealsService} from './meals.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     MealComponent,
-    MealFormComponent,
-    MealPostsComponent
+    MealFormComponent
   ],
   imports: [
     BrowserModule,
